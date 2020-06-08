@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
+        <title>VéloClic</title>
+    </head>
+
+    <body>   
+
+        <header>
+
+            <div id="slideShowContainer">
+                <img src="images/flechesClavier.png" alt="flechesclavier" id="flechesClavier">
+                <div id="buttons">
+                    <i class="fas fa-arrow-left" id="prevButton"></i>
+                    <i class="fas fa-pause" id="pauseButton"></i>
+                    <i class="fas fa-arrow-right" id="nextButton"></i>
+                </div>
+                <div id="slideShow">   
+                    <img src="images/image1.jpg" alt="photo" id="slide">
+                    <h1 id="commentaireImg"><span>VéloClic</span> : le vélo en un clic !</h1>    
+                </div>
+            </div>
+
+        </header>
+
+        <section>
+            
+            <h2>CARTE DES VELOS</h2>
+            
+            <div id="carteDesVelos">
+                <div id="carte">
+                </div>
+                <aside id="infoReservation">    
+                        <div id="infoStation">
+                            <ul id="nomStation">
+                                <li id="nomStationDeux">Station Montparnasse</li>
+                            </ul>
+                            <ul id="ouvertureStation"><li>Ouverte</li></ul>
+                            <ul id="adresse">
+                                <li id="adresseUn">Adresse</li><li id="adresseDeux">Adresse : à coté de casino</li>
+                            </ul>
+                            <ul id="nbrPlaces">
+                                <li>Nombre de places</li><li id="nbrPlacesDeux">20</li>
+                            </ul>
+                            <ul id="nbrVelos">
+                                <li>Nombre de vélos disponibles</li><li id="nbrVelosDeux">12</li>
+                            </ul>
+                        </div>
+                        <h3 id="titre">Sélectionnez votre station sur la carte</h3>
+                        <form id="form">
+                            <label for="nom">Nom<input type="text" name="nom"  id="nom"></label>
+                            <label for="prenom">Prénom<input type="text" name="prenom" id="prenom"></label>
+                            <span id="error"></span>
+                            <span>Signature électronique requise</span>
+                            <canvas id="canvas"></canvas>
+                            <input type="button" id="btnCorriger" value="Corriger signature" >
+                            <input type="button" id="submit" value="Confirmer ma réservation" >
+                        </form>
+                        <input id="btnReserver" value="Réserver un vélo" title="title" >
+                </aside>
+            </div>
+
+            <h2>MA RESERVATION</h2>
+            <div id="sectionReservation">
+                <div id="reservationEnCours">
+                    <p id="nomPrenom"></p>
+                    <div id="maReservation">
+                        <p id="messageReservation">Aucune réservation en cours.</p>
+                    </div>
+                    <button id="annulerReservation">Annuler ma réservation</button>
+                </div>
+            </div>
+        </section>
+        
+        <script src="js/SlideShow.js"></script>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+        <script src="js/Map.js"></script>
+        <script src="js/Reservation.js"></script>
+        <script src="js/Canvas.js"></script>
+        <script src="js/Timer.js"></script>
+        <script src="js/Main.js"></script>
+
+    </body>
+    
+</html>

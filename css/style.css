@@ -1,0 +1,676 @@
+/* Police additionnelle */
+
+@font-face{
+    font-family: "robotoBlack";
+    src: url("../fonts/Roboto-Black.ttf");
+}
+@font-face{
+    font-family: "robotoMedium";
+    src: url("../fonts/Roboto-Medium.ttf");
+}
+body{
+    margin:auto;
+    background-color: rgb(225, 225, 225);
+}
+
+/* Diaporama */
+
+header{
+    padding-bottom: 45px;
+    padding-top: 40px;
+    box-shadow:  0px 0px 3px 0px black inset ;
+}
+#slideShowContainer{
+    position: relative;
+    max-height: 575px;
+    min-height: 575px;
+    box-shadow:  0px 0px 5px 0px black ;
+    border-top: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+#slideShowContainer img{
+    max-width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 575px;
+    max-height: 575px;
+    object-fit: cover;
+}
+#commentaireImg{
+    font-size: 50px;
+    color: white;
+    min-width: 100%;
+    max-width: 100%;
+    font-family:  robotoBlack;
+    position: absolute;
+    text-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 10px black;
+    top: 32%;
+    left: 0%;
+    z-index: 20;
+    background-color: rgba(0, 61, 175, 0.9);
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin: 0px;
+    border-top: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+#flechesClavier{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    min-width: 0px!important;
+    min-height: 0px!important;
+    max-width: 50px!important;
+    max-height: 50px!important;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    z-index: 250;
+    box-shadow: 0px 0px 7px 0px black;
+}
+
+/* buttons */
+
+#prevButton{
+    z-index: 10;
+    font-size: 150%;
+    color: white;
+    padding: 9px;
+    border-radius: 50%;    
+    background-color: white;
+    color:rgba(0, 61, 175, 0.664);
+    transition: background-color 0.4s,color 0.4s;
+    box-shadow: 0px 0px 7px 0px black;
+}
+#nextButton{
+    z-index: 10;
+    font-size: 150%;
+    color:rgba(0, 61, 175, 0.664);
+    padding: 9px;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.4s,color 0.4s;
+    box-shadow: 0px 0px 7px 0px black;
+}
+#pauseButton{
+    text-align: center;
+    z-index: 10;
+    font-size: 150%;
+    padding: 11px;
+    border-radius: 50%;
+    background-color: white;
+    color:rgba(0, 61, 175, 0.664);
+    transition: background-color 0.4s,color 0.4s;
+    box-shadow: 0px 0px 5px 0px black;
+}
+#prevButton:hover, #nextButton:hover, #pauseButton:hover{
+    cursor: pointer;  
+    background-color: rgba(0, 61, 175, 0.664);
+    color: white;
+    box-shadow: 0px 0px 2px 0px black;
+}
+#prevButton:active, #nextButton:active, #pauseButton:active{
+    background-color: white;
+    color:rgba(0, 61, 175, 0.664);
+}
+#buttons{
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    z-index: 20;
+}
+
+/* Contenu de la page (section) */
+
+section{
+    width: 100%;
+}
+
+/* Carte des vélos */
+
+h2{
+    width: 100%;
+    background-color: rgba(0, 61, 175, 0.664);
+    text-align: center;
+    color: white;
+    margin:0%;
+    height: 80px;
+    line-height: 80px;
+    font-family: robotoBlack;
+    text-shadow: 0px 0px 2px black;
+    border-top: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+.mycluster {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 61, 175, 0.664);
+    color: white;
+    text-align: center;
+    font-size: 20px;    
+    line-height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 0px 0px 4px black ;
+}
+#carteDesVelos{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    box-shadow: 0px 0px 3px black inset;
+    background-color: rgb(225, 225, 225);
+    position: relative;
+}
+#carte{
+    height: 600px;
+    width: 67%;
+    z-index: 1;
+    box-shadow:  0px 0px 5px 0px black ;
+}
+.carteBis{
+    height: 600px;
+    width: 65%;
+    z-index: 1;
+}
+.marqueur{
+    color: red;
+}
+
+/* Panneau de réservation */
+
+#infoReservation{
+    width: 30%;
+    height: 600px;
+    background-color: rgb(225, 225, 225);
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: robotoBlack;
+    color: black;
+    border: 0px;
+    box-shadow: 0px 0px 5px black inset;
+    box-shadow:  0px 0px 5px 0px black ;
+    z-index: 250;
+    min-width: 390px;
+}
+.panneau{
+    min-width: 390px;
+    width: 35%;
+    height: 600px;
+    background-color: rgb(225, 225, 225);
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: robotoBlack;
+    color: black;
+    box-shadow: 0px 0px 5px black inset;
+    box-shadow:  1px 0px 5px 0px black ;
+    z-index: 250;
+}
+
+.popUp{
+    margin: 5px!important;
+    text-align: center;
+}
+#nom,#prenom{
+    margin-left: 10px!important;
+}
+#ouvertureStation{
+    background-color: rgb(0, 255, 0);
+    padding-top: 12px!important;
+    padding-bottom: 12px!important;
+    margin-top: 8px!important;
+    margin-bottom: 8px!important;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:rgb(245, 245, 245)!important;
+    font-family: RobotoBlack;
+    width: 35%!important;
+    text-shadow: 0px 0px 5px rgb(75, 75, 75);
+    box-shadow:  0px 0px 2px 0px black ;
+}
+.ouvertureStationOrange{
+    background-color: orange!important;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:white!important;
+    font-family: RobotoBlack;
+    margin: 0px;
+    width: 90%;
+    text-shadow: 0px 0px 5px rgb(75, 75, 75);
+    box-shadow:  0px 0px 2px 0px black ;
+}
+.ouvertureStationRouge{
+    background-color: red!important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:white!important;
+    font-family: RobotoBlack;
+    margin: 0px;
+    width: 90%;
+    text-shadow: 0px 0px 5px rgb(75, 75, 75);
+    box-shadow:  0px 0px 2px 0px black ;
+}
+#nomStation{
+    background-color: rgb(225, 225, 225);
+    color:white;
+    border-top-right-radius: 5px;
+    padding: 0px;
+}
+#nomStation li{
+    height: 100%;
+    font-family: robotoBlack!important;
+    font-size: 19px!important;
+    width: 100%!important;
+}
+#nomStationDeux{
+    width: 100%;
+    text-align: center!important;
+}
+#adresse{
+    color: rgb(50, 50, 50);
+    position: relative;
+    padding: 0px;
+}
+#adresseDeux{
+    text-transform: lowercase;
+}
+#nbrPlaces, #nbrVelos,#adresseUn{
+    color: white;
+    padding: 0px;
+} 
+#nbrPlacesDeux, #nbrVelosDeux, #adresseDeux{
+    background-color: rgb(225, 225, 225)!important;
+    color: rgb(50, 50, 50);
+}
+.stationName{
+    padding-bottom: 10px;
+}
+
+/* Infos station */
+
+#infoStation{
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px!important;
+    padding: 0px!important;
+    box-shadow: 0px 0px 3px black ;
+    border: 1px solid rgb(225, 225, 225);
+}
+.infoStationOuvert{
+    display: flex!important;
+}
+#infoStation ul{
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 17px;
+    width: 100%;
+}
+#infoStation ul:hover{
+    opacity: 0.95;
+}
+#infoStation ul li{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 61, 175, 0.664);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: robotoMedium;
+}
+
+/* h3 'Sélectionnez votre station' */
+
+#titre{
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 61, 175, 0.664);
+    box-shadow: 0px 0px 2px black ;
+    text-align: center;
+    font-family: robotoBlack;
+    border-top: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+    color: white;
+}
+.titreClic{
+    display: none!important;
+    position:absolute;
+}
+
+/* Formulaire réservation */
+
+#form{
+    display: none;
+}
+.formOuvert{
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    transform: scale(0.95);
+    margin-top: 5px!important;
+    margin-bottom: 15px!important;
+    width: 100%;
+    height: 100%;
+}
+label{
+    color: rgb(50, 50  ,50);
+    width: 100%;
+    text-align: center;
+}
+#nom,#prenom{
+    margin-left: 15px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 5px black;
+}
+span{
+    color: rgb(50,50,50);
+}
+input{  
+    padding: 5px;
+    text-align: center;
+    border-radius:20px ;
+    border: none;
+    font-family: robotoMedium;
+    font-size: 18px;
+    color: rgb(50, 50, 50);
+}
+button{ 
+    padding: 5px;
+    text-align: center;
+    border-radius:20px ;
+    border: none;
+    font-family: robotoMedium;
+    font-size: 18px;
+    color: rgb(50, 50, 50);
+}
+#canvas{
+    min-height: 250px;
+    min-width: 300px;
+    max-height: 250px;
+    max-width: 300px;
+    border: 1px solid rgba(71, 99, 153, 0.664);
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 5px black;
+}
+#submit{
+    margin-top: 10px;
+    padding: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius:30px ;
+    font-family: robotoBlack;
+    background-color: rgb(225,225,225);
+    color:rgb(50,50,50);
+    box-shadow: 0px 0px 5px black;
+    transition: background-color 0.2s,color 0.2s,text-shadow 0.2s, box-shadow 0.2s;
+    transform: scale(1);
+    text-shadow: none;
+    transition: 0.2s ease;
+}
+#btnCorriger{
+    font-size: 16px!important;
+    padding: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius:30px ;
+    font-family: robotoBlack;
+    color: rgb(50, 50, 50);
+    background-color:rgb(225, 225, 225);
+    box-shadow: 0px 0px 5px black;
+    transition: background-color 0.2s,color 0.2s,text-shadow 0.2s, box-shadow 0.2s;
+    transform: scale(1);
+    text-shadow: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#btnReserver{
+    display: none;
+}
+.btnReserverActif{
+    margin-top: 10px;
+    padding: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius:30px ;
+    font-family: robotoBlack;
+    background-color: rgb(225,225,225);
+    color:rgb(50,50,50);
+    box-shadow: 0px 0px 5px black;
+    transition: background-color 0.2s,color 0.2s,text-shadow 0.2s, box-shadow 0.2s;
+    text-shadow: none;
+    display: block!important;
+    transition: 0.2s ease;
+}
+#error{
+    color: red;
+    font-family: robotoMedium;
+}
+#corriger:hover{
+    cursor: pointer;
+    background-color: rgb(185, 185, 185);
+    color:rgb(30, 30, 30);
+    box-shadow: 0px 0px 5px black;
+}
+.btnReserverActif:hover, #submit:hover, #btnCorriger:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 61, 175, 0.664);
+    box-shadow: 0px 0px 2px black;
+}
+.btnReserverActif:active, #submit:active{
+    transform: scale(0.98);
+    box-shadow: 0px 0px 2px black inset;
+    box-shadow: 0px 0px 5px;
+}
+#saut{
+    display: none;
+}
+
+/* Ma réservation */
+#sectionReservation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(225, 225, 225);
+    box-shadow: 0px 0px 3px black inset;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+#animation{
+    display: none;
+}
+#reservationEnCours{
+    margin-top: 25px;
+    width: 99%;
+    min-height: 150px;
+    background-color: rgb(225, 225, 225);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.messageFerme{
+    display: none;
+}
+#nomPrenom{
+    display: none;
+}
+.nomPrenomActif{
+    min-width: 15%;
+    box-shadow: 0px 0px 2px black;
+    text-align: left;
+    font-family: robotoMedium;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 61, 175, 0.664);
+    border: 1px solid rgb(225, 225, 225);
+    font-family: robotoMedium;
+    display: flex!important;
+    flex-direction: column;
+    z-index: 2;
+    margin-left: 25px;
+}
+#maReservation{
+    box-shadow:  1px 0px 5px 0px black ;
+    text-align: center;
+    font-family: robotoMedium;
+    font-size: 20px;
+    color:rgb(50, 50, 50);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(226, 225, 225);
+    color: rgb(50, 50, 50);
+    border: 1px solid rgb(225, 225, 225);
+    display: flex;
+    flex-direction: column;
+}
+.maReservationFerme{
+    display: none!important;
+}
+#annulerReservation{
+    display: none;
+}
+.boutonAnnuler{
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgb(225,225,225);
+    color:rgb(50,50,50);
+    box-shadow: 0px 0px 5px black;
+    transition: background-color 0.2s,color 0.2s;
+    font-family: robotoBlack;
+    display: flex!important;
+    margin: 25px;
+}
+#annulerReservation:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 61, 175, 0.664);
+    box-shadow: 0px 0px 2px black;
+}
+
+/* Media querries */
+
+@media screen and (max-width: 1024px){
+    #carteDesVelos{
+       display: flex;
+       flex-direction: column;
+    }
+    #carte, #infoReservation{
+        width: 100%;
+    }
+    #btnReserver{
+        margin-top: 25px;
+    }
+    #infoReservation{
+       min-width: 0px;
+        height: initial;  
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around; 
+        font-size: 17px;
+        padding: 20px;
+        width: initial;
+        position: initial;
+        border-top-right-radius:0px ;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    #infoStation{
+       width: 100%;
+    }
+    input{
+        margin: 3%;
+    }
+    #corriger{
+        margin-top: 20px;
+    }
+    span{
+        margin-bottom: 25px;
+    }
+    #submit{
+        margin-top: 4%;
+    }
+    #reservationEnCours{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #nomPrenom{
+        text-align: center;
+        margin-left: 0px;
+    }
+    #sectionReservation{
+        padding-top: 0px;
+    }
+    .boutonAnnuler{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width: 640px){
+    #slideShowContainer, #slideShowContainer img{
+        max-height: 525px;
+        min-height: 400px;
+    }
+    #commentaireImg{
+        min-width: 100%;
+        max-width: 100%!important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: absolute;
+        top: 15%;
+    }
+    #carteDesVelos{
+        padding-top:45px;
+        padding-bottom: 45px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    #commentaireImg{
+        font-size: 35px;
+    }
+    #nomPrenom{
+        margin-bottom: 30px;
+    }
+    #carte{
+        max-height: 525px;
+    }
+    #corriger{
+        margin-top: 15px;
+    }
+    #infoReservation{
+        flex-direction: column  ;
+        justify-content: space-around;
+        position: initial;
+    }
+}
